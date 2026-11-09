@@ -15,3 +15,6 @@ if [ -n "$TMUX" ]; then
   # Pull the latest VS Code IPC hook from the tmux manager
   export VSCODE_IPC_HOOK_CLI=$(tmux show-env | grep ^VSCODE_IPC_HOOK_CLI | cut -d= -f2)
 fi
+
+bindkey '^[p' history-beginning-search-backward
+bindkey '^[n' history-beginning-search-forward
